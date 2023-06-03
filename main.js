@@ -6,10 +6,11 @@ function del(){
     }
 }
 
-browser.runtime.onRequest.addListener((request,sender,res)=>{
+browser.runtime.onMessage.addListener((request,sender,res)=>{
     console.log(request)
     console.log(sender)
     console.log(res)
     res({})
+    del()
 }
 )
