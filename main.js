@@ -5,3 +5,11 @@ function del(){
     tweet.remove()
     }
 }
+
+browser.runtime.onRequest.addListener((request,sender,res)=>{
+    console.log(request)
+    console.log(sender)
+    console.log(res)
+    res({})
+}
+)
